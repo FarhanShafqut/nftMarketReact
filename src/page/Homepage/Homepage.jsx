@@ -3,6 +3,11 @@ import Button from "../../components/Button.jsx/Button";
 import Card from "../../components/Card/card";
 import Heading from "../../components/Heading/Heading";
 import Bundlescard from "../../components/BundlesCard/BundlesCard";
+import UserMainSlider from "../../components/UserMainSlider/UserMainSlider";
+
+import MoveCard from "../../components/MoveCard/MoveCard";
+import SecondBundleCard from "../../components/SecondBundleCard/SecondBundleCard";
+
 
 export default function Homepage() {
   return (
@@ -21,7 +26,7 @@ export default function Homepage() {
                 and sell art from more than 20k NFT artists.
               </p>
               <Button
-                color="bg-purple-600 px-12  rounded-[20px] py-4 hover:bg-purple-700  active:bg-purple-800"
+                color="bg-purple-600 px-12  rounded-[20px] py-3 my-5 hover:bg-purple-700  active:bg-purple-800"
                 txt="Get started"
                 img={require("../../assests/RocketLaunch.png")}
                 imgstyle="inline pe-2"
@@ -44,15 +49,15 @@ export default function Homepage() {
             <Card />
           </div>
         </div>
+     
       </div>
       {/* 2nd page */}
-      <Heading
-        txt1="Trending Collection"
-        txt2="Checkout our weekly updated trending collection."
-      />
-      <div className="max-w-7xl  px-7  sm:py-0  sm:ms-10  md:ms-10 2xl:ms-52  my-10 ">
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-32 ">
-          <Bundlescard
+          <div className=" max-w-full  px-7  sm:py-0  sm:ms-10  md:ms-10 2xl:ms-52  my-10  ">
+        <h1 className='font-bold text-4xl text-white'>Trending Collection</h1>
+           <span><h3 className='text-xl text-white mt-3'>Checkout our weekly updated trending collection."</h3></span>
+        </div>
+      <div className="max-w-full  px-7  sm:py-0  sm:ms-10  md:ms-10 2xl:ms-52  my-10 ">
+      <MoveCard card={<Bundlescard
             img1={require("../../assests/Primary Photo Placeholder.png")}
             img2={require("../../assests/Secondary Photo Placeholder.png")}
             img3={require("../../assests/Secondary Photo Placeholder-1.png")}
@@ -60,8 +65,8 @@ export default function Homepage() {
             txt="1025+"
             txt1="DSGN Animals"
             txt2="MrFox"
-          />
-          <Bundlescard
+          /> } 
+          card2={  <Bundlescard
             img1={require("../../assests/Primary Photo Placeholder-1.png")}
             img2={require("../../assests/Primary Photo Placeholder-1.png")}
             img3={require("../../assests/Primary Photo Placeholder-1.png")}
@@ -69,8 +74,8 @@ export default function Homepage() {
             txt="1025+"
             txt1="Magic Mushrooms"
             txt2="Shroomie"
-          />
-          <Bundlescard 
+          />}        
+          card3={ <Bundlescard 
             img1={require("../../assests/Primary Photo Placeholder-2.png")}
             img2={require("../../assests/Secondary Photo Placeholder-2.png")}
             img3={require("../../assests/Secondary Photo Placeholder-3.png")}
@@ -78,9 +83,58 @@ export default function Homepage() {
             txt="1025+"
             txt1="DSGN Disco Machines"
             txt2="BeKind2Robots"
+          />}  
           />
-        </div>
       </div>
+      <Heading
+        txt1="Trending Collection"
+        txt2="Checkout our weekly updated trending collection."
+        img={require("../../assests/RocketLaunch.png")}
+        bttxt="Get Started"
+        imgstyle="inline pe-2"
+      />
+      <UserMainSlider/>
+      <Heading
+        txt1="Discover More NFTs"
+        txt2="Explore new trending NFTs"
+        img={require("../../assests/Eye.png")}
+        bttxt="See All"
+        imgstyle="inline pe-2 mt-1"
+        />
+        
+        {/* 2nd slider */}
+        <div className="max-w-full  px-7  sm:py-0  sm:ms-10  md:ms-10 2xl:ms-52  my-10 ">
+      <MoveCard card={ <SecondBundleCard
+          img1={require("../../assests/planet.png")}
+          img4={require("../../assests/Avatar Placeholder-1.png")}
+          txt1="Distant Galaxy"
+          txt2="MoonDancer"        
+          txt3="Price"   
+          txt5="1.63 ETH"
+          txt6="0.33 wETH"        
+        /> } 
+          card2={  <SecondBundleCard
+            img1={require("../../assests/planet.png")}
+            img4={require("../../assests/Avatar Placeholder-1.png")}
+            txt1="Distant Galaxy"
+            txt2="MoonDancer"        
+            txt3="Price"   
+            txt5="1.63 ETH"
+            txt6="0.33 wETH"        
+          />}        
+          card3={ <SecondBundleCard
+            img1={require("../../assests/planet.png")}
+            img4={require("../../assests/Avatar Placeholder-1.png")}
+            txt1="Distant Galaxy"
+            txt2="MoonDancer"        
+            txt3="Price"   
+            txt5="1.63 ETH"
+            txt6="0.33 wETH"        
+          />}  
+          />
+      </div>
+
+
     </div>
   );
 }

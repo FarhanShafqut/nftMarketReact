@@ -8,7 +8,7 @@ export default function Bundlescard(prop) {
                     <img className=" inline w-full  my-1" src={prop.img3} alt="" />
                     <p className="w-full  bg-purple-500 rounded-2xl flex justify-center py-8 font-semibold text-xl  text-white ">{prop.txt}</p>
                     </div>
-             <div className="p-2 px-5 ">
+             <div className="p-2 px-1 ">
              <p className="text-lg text-white font-semibold">{prop.txt1}</p>
               <img className=" inline w-8 my-4" src={prop.img4} alt="" /><span className=" ps-2  text-white">{prop.txt2}</span>
               </div>
