@@ -9,7 +9,7 @@ export default function Heading(prop) {
             </span>
              <span className="flex sm:py-4 my-2 2xl:pe-40 sm:pe-20 sm:justify-end  ">
              <Button
-                color="border-2 border-purple-600 px-12   text-white  rounded-[20px] hover:bg-purple-700 active:bg-purple-800"
+                color={`border-2 border-purple-600 px-12   text-white  rounded-[20px] hover:bg-purple-700 active:bg-purple-800 ${prop.bg} }`}
                 txt={prop.bttxt}
                 img={prop.img}
                 imgstyle={prop.imgstyle}
